@@ -14,74 +14,73 @@ const storage = {
     try {
       localStorage.setItem(key, value);
     } catch {
-      /* Preferences still work without storage. */
     }
   },
 };
-const arabic = {
-  skip: "انتقل إلى المحتوى",
-  aboutNav: "نبذة عني",
-  skillsNav: "المهارات",
-  projectsNav: "المشاريع",
-  contactNav: "تواصل معي",
-  intro: "مهندس بالتخصص. فضولي بطبيعتي.",
-  hello: "مرحباً، أنا حمزة.",
-  build: "عقلية مهندس",
-  curiosity: "وشغف مطوّر",
-  heroDescription:
-    "من الأنظمة الميكانيكية إلى التجارب الرقمية المدروسة. مطوّر ومصمم ومتعلم مدى الحياة — غالباً مع كوب من الشاي بالنعناع.",
-  explore: "استكشف أعمالي",
-  talk: "لنتحدث",
-  teaCaption: "الأفكار الجيدة تبدأ بلحظة هدوء.",
-  teaLabel: "برعاية أكواب الشاي اللانهائية",
-  heroFoot: "تصميم مدروس. برمجة هادفة. تواصل إنساني.",
-  aboutTitle: "مسارات مختلفة.\nوعقل فضولي واحد.",
-  bio1: "مهندس ميكانيك تحول لمطور .NET و React بخبرة 4 سنوات. بدافع الفضول وحب التعلم، تخرجت من 42 عمّان، درست UI/UX و AWS، وحالياً بتعلم أمن سيبراني. أهتم بجمال التصاميم وبساطتها. أستمتع بحل المشاكل البرمجية، مساعدة الآخرين، وجلسات النقاش التقنية التي يرافقها كوب من الشاي.",
-
-  tag1: "أبني",
-  tag2: "أتعلم",
-  tag3: "أشارك المعرفة",
-  tag4: "عاشق للشاي بالنعناع",
-  portraitAlt: "رسم توضيحي مؤقت مكان صورة حمزة",
-  portraitNote: "أتطور باستمرار. وأتعلم دائماً.",
-  sskillsTitle: "بعض ما أقدّمه.",
-  skill1: "تصميم UI/UX",
-  skill2: "تطوير الويب المتكامل",
-  skill3: "سحابة AWS",
-  skill4: "حل المشكلات",
-  skill5: "الإرشاد والتعليم",
-  skillDesc1: "تجارب واضحة ومريحة تضع الإنسان في المركز.",
-  skillDesc2: "أربع سنوات من ربط الواجهات والأنظمة باستخدام .NET وReact.",
-  skillDesc3: "أساس في التقنيات السحابية اكتسبته في لومينوس.",
-  skillDesc4: "عقلية هندسية صقلتها من خلال برنامج 42.",
-  skillDesc5: "أشارك ما أعرفه وأتعلم ممن حولي.",
-  projectsTitle: "صُنعت لأتعلم.\nوبُنيت لأترك أثراً.",
-  projectsIntro: "نفاصيل المشاريع قريباً.",
-  soon: "التفاصيل قريباً",
-  github: "استكشف حسابي على GitHub",
-  contactTitle: "حوارات جميلة.\nوإمكانيات رائعة.",
-  contactIntro: "لديك فكرة أو سؤال أو شيء تود مشاركته؟\nلنتواصل. سأحضّر الشاي.",
-  name: "اسمك",
-  email: "بريدك الإلكتروني",
-  namePlaceholder: "بماذا أناديك؟",
-  formNote: "يفتح هذا النموذج تطبيق بريدك الإلكتروني مع مقدمة جاهزة للإرسال.",
-  submit: "قل مرحباً",
-  fullName: "حمزة المحيسن",
-  footerNote: "صُنع بعناية وفضول وشاي بالنعناع.",
-  top: "إلى الأعلى ↑",
+const translations = {
+  en: {
+    hobbiesTitle: "Off the Screen",
+    hobby1Title: "Binge-Watching",
+    hobby1Desc: "Unwinding with a good TV series to disconnect and recharge.",
+    hobby2Title: "Continuous Learning",
+    hobby2Desc: "Taking educational courses to satisfy my endless curiosity.",
+    hobby3Title: "Tinkering",
+    hobby3Desc: "Finding weird, new, and experimental tech projects to play around with just for fun.",
+    footerNote: "Made with care, curiosity & tea.",
+  },
+  ar: {
+    skip: "انتقل إلى المحتوى",
+    aboutNav: "نبذة عني",
+    skillsNav: "المهارات",
+    projectsNav: "المشاريع",
+    contactNav: "تواصل معي",
+    hello: "مرحباً، أنا حمزة.",
+    build: "عقلية مهندس",
+    curiosity: "وشغف مطوّر",
+    explore: "استكشف أعمالي",
+    talk: "لنتحدث",
+    teaLabel: "برعاية أكواب الشاي اللانهائية",
+    aboutTitle: "تعرف عليّ.",
+    bio1: "مهندس ميكانيك تحول لمطور .NET و React بخبرة 4 سنوات. بدافع الفضول وحب التعلم، تخرجت من 42 عمّان، درست UI/UX و AWS، وحالياً بتعلم أمن سيبراني. أهتم بجمال التصاميم وبساطتها. أستمتع بحل المشاكل البرمجية، مساعدة الآخرين، وجلسات النقاش التقنية التي يرافقها كوب من الشاي.",
+    portraitAlt: "رسم توضيحي مؤقت مكان صورة حمزة",
+    skillsTitle: "مهاراتي.",
+    skill1: "تصميم UI/UX",
+    skill2: "تطوير الويب المتكامل",
+    skill3: "سحابة AWS",
+    skill4: "حل المشكلات",
+    skill5: "الإرشاد والتعليم",
+    skillDesc1: "تجارب واضحة ومريحة تضع الإنسان في المركز.",
+    skillDesc2: "أربع سنوات من ربط الواجهات والأنظمة باستخدام .NET وReact.",
+    skillDesc3: "أساس في التقنيات السحابية اكتسبته في لومينوس.",
+    skillDesc4: "عقلية هندسية صقلتها من خلال برنامج 42.",
+    skillDesc5: "أشارك ما أعرفه وأتعلم ممن حولي.",
+    projectsTitle: "مشاريعي.",
+    projectsIntro: "نفاصيل المشاريع قريباً.",
+    soon: "التفاصيل قريباً",
+    github: "استكشف حسابي على GitHub",
+    hobbiesTitle: "بعيداً عن الشاشة",
+    hobby1Title: "متابعة المسلسلات",
+    hobby1Desc: "الاستمتاع بمشاهدة المسلسلات لفصل الدماغ وتجديد الطاقة.",
+    hobby2Title: "التعلم المستمر",
+    hobby2Desc: "متابعة كورسات تعليمية لإشباع فضولي الدائم في استكشاف كل جديد.",
+    hobby3Title: "التجارب التقنية",
+    hobby3Desc: "البحث عن مشاريع تقنية غريبة وجديدة لتجربتها والتسلية بها.",
+    contactTitle: "لنتواصل.",
+    contactIntro: "لديك فكرة أو سؤال أو شيء تود مشاركته؟\nلنتواصل. سأحضّر الشاي.",
+    name: "اسمك",
+    email: "بريدك الإلكتروني",
+    namePlaceholder: "بماذا أناديك؟",
+    formNote: "يفتح هذا النموذج تطبيق بريدك الإلكتروني مع مقدمة جاهزة للإرسال.",
+    submit: "قل مرحباً",
+    fullName: "حمزة المحيسن",
+    footerNote: "صُنع بشغف، فضول، وكوب شاي.",
+    top: "إلى الأعلى",
+  },
 };
-// Keep section names direct and consistent in both languages.
-Object.assign(arabic, {
-  intro: "مهندس. مطوّر. متعلم مدى الحياة.",
-  aboutTitle: "تعرف عليّ.",
-  skillsTitle: "مهاراتي.",
-  projectsTitle: "مشاريعي.",
-  contactTitle: "لنتواصل.",
-});
-const english = new Map();
+const englishContent = new Map();
 document
   .querySelectorAll("[data-i18n]")
-  .forEach((element) => english.set(element, element.innerHTML));
+  .forEach((element) => englishContent.set(element, element.innerHTML));
 const englishPlaceholder = document.getElementById("name").placeholder;
 const englishAlt = document.querySelector("[data-alt]").alt;
 let language = storage.get("portfolio-language") === "ar" ? "ar" : "en";
@@ -106,11 +105,12 @@ function applyTheme() {
 function applyLanguage() {
   root.lang = language;
   root.dir = language === "ar" ? "rtl" : "ltr";
-  english.forEach((original, element) => {
-    if (language === "en") element.innerHTML = original;
-    else if (arabic[element.dataset.i18n]) {
+  englishContent.forEach((original, element) => {
+    const text = translations[language][element.dataset.i18n];
+    if (text === undefined) element.innerHTML = original;
+    else {
       element.replaceChildren(
-        ...arabic[element.dataset.i18n]
+        ...text
           .split("\n")
           .flatMap((line, index) =>
             index
@@ -133,9 +133,9 @@ function applyLanguage() {
       language === "ar" ? "التنقل الرئيسي" : "Main navigation",
     );
   document.getElementById("name").placeholder =
-    language === "ar" ? arabic.namePlaceholder : englishPlaceholder;
+    language === "ar" ? translations.ar.namePlaceholder : englishPlaceholder;
   document.querySelector("[data-alt]").alt =
-    language === "ar" ? arabic.portraitAlt : englishAlt;
+    language === "ar" ? translations.ar.portraitAlt : englishAlt;
   document.getElementById("form-status").textContent = "";
   document.title =
     language === "ar"
